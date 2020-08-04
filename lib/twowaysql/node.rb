@@ -79,7 +79,7 @@ module TwoWaySQL
     def within_safe_level(level)
       result = nil
       Thread.start {
-        $SAFE = level
+        # $SAFE = level
         result = yield
       }.join
       result
